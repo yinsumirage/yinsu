@@ -4,7 +4,7 @@ title: Fragment Navigation in View
 ---
 # 1.实现跳转
 
-## 1.1 在需要实现跳转的主界面如ActivityMain.xml内，写fragment
+## 1.1 在需要实现跳转的主界面如ActivityMain.xml内，写fragment  
 ```xml
 <fragment  
     android:id="@+id/nav_host_fragment_activity_main"  
@@ -30,7 +30,7 @@ title: Fragment Navigation in View
 ## 1.2 主界面里写底部导航栏
 
 ActivityMain.xml内写底部导航栏的内容
-bottom_nav_menu是一个xml文件，定义了menu内的item，定义名字、icon
+bottom_nav_menu是一个xml文件，定义了menu内的item，定义名字、icon  
 ```xml
 <com.google.android.material.bottomnavigation.BottomNavigationView  
     android:id="@+id/nav_view"  
@@ -47,7 +47,7 @@ bottom_nav_menu是一个xml文件，定义了menu内的item，定义名字、ico
 
 通过AppBarConfiguration写setOf定义顶层图（在这些图内不会自动配备appbar内的返回），如果传入graph进去会自动判断，但是有并列等级啥的问题
 绑定navController与顶层视图，R.id.nav_host_fragment_activity_main是fragment的名字
-再绑定视图内的navView，即导航栏，与navController，就可以使用
+再绑定视图内的navView，即导航栏，与navController，就可以使用  
 ```kotlin
 val navController = findNavController(R.id.nav_host_fragment_activity_main)
 val appBarConfiguration = AppBarConfiguration(  
@@ -70,7 +70,7 @@ findNavController().navigate(R.id.action_navigation_q1_to_navigation_consult_res
 其中id是跳转的action名字
 
 如果需要在跳转的时候进行传参操作:
-1. 需要在graph内加attributions，在其中加上可以保存的参数
+1. 需要在graph内加attributions，在其中加上可以保存的参数  
 ```xml
 <fragment  
     android:id="@+id/navigation_q1"  
