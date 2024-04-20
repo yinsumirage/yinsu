@@ -2,9 +2,9 @@ title: YinSu
 description: A bold typographic theme inspired by Swiss design.
 social_link: twitter
 social_username: broccolini
-github_repo: athena
+github_repo: yinsu
 github_username: yinsumirage
-theme_color: black
+theme_color: white
 remote_theme: internet-de-france/swiss
 baseurl: /yinsu
 defaults:
