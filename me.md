@@ -1,5 +1,5 @@
 ---
-title: Me
+layout: category_index
+title: me
 
 ---
-it's a page to introduce myself.
