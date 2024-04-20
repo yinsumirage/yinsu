@@ -1,10 +1,9 @@
 ---
 layout: home
-permalink: "/"
-title: Athena Jekyll Theme
+permalink: /
+title: Welcome to Mirage
 
 ---
-
-A simple and elegant theme for Jekyll and GitHub Pages.
+New page for me to write blogs
 
 
