@@ -68,10 +68,12 @@ navView.setupWithNavController(navController)
 ```
 findNavController().navigate(R.id.action_navigation_q1_to_navigation_consult_result)
 ```
+
 其中id是跳转的action名字
 
 如果需要在跳转的时候进行传参操作:
 1. 需要在graph内加attributions，在其中加上可以保存的参数  
+
 ```
 <fragment  
     android:id="@+id/navigation_q1"  
