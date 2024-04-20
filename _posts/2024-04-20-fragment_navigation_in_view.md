@@ -72,7 +72,8 @@ findNavController().navigate(R.id.action_navigation_q1_to_navigation_consult_res
 其中id是跳转的action名字
 
 如果需要在跳转的时候进行传参操作:
-1. 需要在graph内加attributions，在其中加上可以保存的参数  
+1. 需要在graph内加attributions，在其中加上可以保存的参数 
+ 
 
 ```
 <fragment  
@@ -101,7 +102,9 @@ findNavController().navigate(R.id.action_navigation_q1_to_navigation_consult_res
         android:defaultValue="0" />  
 </fragment>
 ```
+
 2. 需要跳转前写好bundle，在跳转时当参数投入进去，后续才能收到
+
 ```kotlin
 val bundle = Bundle().also {  
     it.putInt("cold",cold)  
@@ -111,7 +114,9 @@ val bundle = Bundle().also {
 }  
 findNavController().navigate(R.id.action_navigation_q1_to_navigation_consult_result,bundle)
 ```
+
 3. 接收时在复写onCreate函数时就进行接收操作
+
 ```kotlin
 private var cold = 0  
 private var blod = 0  
