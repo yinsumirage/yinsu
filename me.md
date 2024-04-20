@@ -1,9 +1,8 @@
 ---
-layout: category_index
+layout: page
 title: Me
 permalink: /me/
-category_name: me
+category_name: ''
 
 ---
-
 It's my introduction pages.
