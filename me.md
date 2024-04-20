@@ -1,5 +1,6 @@
 ---
-layout: category_index
+layout: page
 title: me
 
 ---
+it's me
