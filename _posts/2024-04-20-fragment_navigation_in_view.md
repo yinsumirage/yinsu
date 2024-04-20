@@ -6,6 +6,11 @@ title: Fragment Navigation in View
 
 ## 1.1 在需要实现跳转的主界面如ActivityMain.xml内，写fragment  
 
+写出fragment的要点
+1. 要记住id，findNavigation的时候要id
+2. 这个name里面的NavHostFragment是核心，对初始的跳转页要写这个
+3. 写navGraph，图给到跳转的层级，里面定义了各个跳转动作
+
 ```xml
 <fragment  
     android:id="@+id/nav_host_fragment_activity_main"  
@@ -23,10 +28,6 @@ title: Fragment Navigation in View
     app:layout_constraintVertical_bias="0.0"  
     app:navGraph="@navigation/mobile_navigation" />
 ```
-写出fragment的要点
-1. 要记住id，findNavigation的时候要id
-2. 这个name里面的NavHostFragment是核心，对初始的跳转页要写这个
-3. 写navGraph，图给到跳转的层级，里面定义了各个跳转动作
 
 ## 1.2 主界面里写底部导航栏
 
