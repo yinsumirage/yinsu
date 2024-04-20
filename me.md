@@ -1,6 +1,6 @@
 ---
+title: Me
 layout: page
-title: me
 
 ---
-it's me here
+how to do it
