@@ -5,6 +5,7 @@ title: Fragment Navigation in View
 # 1.实现跳转
 
 ## 1.1 在需要实现跳转的主界面如ActivityMain.xml内，写fragment  
+
 ```xml
 <fragment  
     android:id="@+id/nav_host_fragment_activity_main"  
@@ -64,14 +65,14 @@ navView.setupWithNavController(navController)
 **重点**就是记得要**记住id好调用**
 
 后续在fragment内需要跳转至新fragment时，直接
-```kotlin
+```
 findNavController().navigate(R.id.action_navigation_q1_to_navigation_consult_result)
 ```
 其中id是跳转的action名字
 
 如果需要在跳转的时候进行传参操作:
 1. 需要在graph内加attributions，在其中加上可以保存的参数  
-```xml
+```
 <fragment  
     android:id="@+id/navigation_q1"  
     android:name="com.example.bottom_navigation.ui.question.Q1"  
