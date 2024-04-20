@@ -3,4 +3,5 @@ title: Me
 layout: page
 
 ---
-how to do it
+permalink: /me/
+filename: my-awesome-category.html
