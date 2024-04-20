@@ -1,7 +1,9 @@
 ---
+layout: category_index
 title: Me
-layout: page
+permalink: /me/
+category_name: me
 
 ---
-permalink: /me/
-filename: my-awesome-category.html
+
+It's my introduction pages.

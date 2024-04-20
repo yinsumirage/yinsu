@@ -1,6 +1,7 @@
 ---
+layout: category-post
 title: Fragment Navigation in View
-
+categories: writing
 ---
 # 1.实现跳转
 
@@ -11,7 +12,7 @@ title: Fragment Navigation in View
 2. 这个name里面的NavHostFragment是核心，对初始的跳转页要写这个
 3. 写navGraph，图给到跳转的层级，里面定义了各个跳转动作
 
-```xml
+```
 <fragment  
     android:id="@+id/nav_host_fragment_activity_main"  
   
@@ -33,7 +34,7 @@ title: Fragment Navigation in View
 
 ActivityMain.xml内写底部导航栏的内容
 bottom_nav_menu是一个xml文件，定义了menu内的item，定义名字、icon  
-```xml
+```
 <com.google.android.material.bottomnavigation.BottomNavigationView  
     android:id="@+id/nav_view"  
     android:layout_width="0dp"  
@@ -105,7 +106,7 @@ findNavController().navigate(R.id.action_navigation_q1_to_navigation_consult_res
 
 * **需要跳转前写好bundle，在跳转时当参数投入进去，后续才能收到**
 
-```kotlin
+```
 val bundle = Bundle().also {  
     it.putInt("cold",cold)  
     it.putInt("blod",blod)  
@@ -117,7 +118,7 @@ findNavController().navigate(R.id.action_navigation_q1_to_navigation_consult_res
 
 * **接收时在复写onCreate函数时就进行接收操作**
 
-```kotlin
+```
 private var cold = 0  
 private var blod = 0  
 private var hott = 0  
@@ -134,7 +135,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 ```
 
 # 2.正常进行返回
-```kotlin
+```
 override fun onSupportNavigateUp(): Boolean {  
     return super.onSupportNavigateUp() || findNavController(R.id.nav_host_fragment_activity_main).navigateUp()  
     // 这个是返回的关键  
@@ -147,7 +148,7 @@ override fun onSupportNavigateUp(): Boolean {
 
 在override fun onCreate(savedInstanceState: Bundle?)函数内
 添加函数
-```kotlin
+```
 navController.addOnDestinationChangedListener { _, destination, _ ->  
     if (destination.id in arrayOf(  
             R.id.navigation_my,R.id.navigation_dashboard,R.id.navigation_home  
